@@ -9,7 +9,7 @@ import Addproduct from './Components/Addproduct';
 import Getproduct from './Components/Getproduct';
 import Makepayment from './Components/Makepayment';
 import Footer from './Components/Footer';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route,  } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 
 
@@ -27,7 +27,7 @@ function App() {
           <h1 className='oi-regular text-white'>OUTFITS MANAGEMENT & ACCESSORIES</h1>
 
         </header>
-        <marquee className="text-dark bold font-weight-bold font-italic btn btn-danger">WELCOME ALL   TO OUR PLATFORM </marquee>
+       <div className="scroll-text  text-danger ">WELCOME TO OUR PLATFORM</div>
 
         <Routes>
           <Route path='/' element={<Getproduct />} />

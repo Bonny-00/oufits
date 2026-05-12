@@ -19,7 +19,7 @@ const Getproduct = () => {
     // function to filter products 
     useEffect(() => {
         filterproducts()
-    }, [search])
+    },  [search])
     const filterproducts = () => {
         const filtered = product.filter(singleproduct => singleproduct.product_name.toLowerCase().includes(search.toLowerCase()))
         setFilteredproducts(filtered)

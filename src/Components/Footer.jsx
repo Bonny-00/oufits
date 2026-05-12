@@ -27,13 +27,13 @@ const Footer = () => {
                 {/* <!-- child 3 --> */}
                 <div class="col-md-4">
                     <h2 class="text-center text-red">Connect with us</h2>
-                    <a href="">
+                    <a href="https://facebook.com">
                         <img src="images/download.png" alt="fb" width="80px" />
                     </a>
-                    <a href="">
+                    <a href="https://instagram.com">
                         <img src="images/download (10).jpeg" alt="in" width="80px" />
                     </a>
-                    <a href="">
+                    <a href="https://twitter.com">
                         <img src="images/download (1).png" alt="x" width="80px" />
                     </a>
 
