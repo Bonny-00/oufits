@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Carousel from './Carousel';
 const Getproduct = () => {
@@ -17,12 +17,18 @@ const Getproduct = () => {
 
 
     // function to filter products 
+
+    const filterproducts = useCallback(() => {
+    // filtering logic here
+  }, []);
+   const getproducts = useCallback(() => {
+    // fetch product logic here
+  }, []);
     useEffect(() => {
         filterproducts()
     }, [filteredproducts])
-    const filterproducts = () => {
-        const filtered = product.filter(singleproduct => singleproduct.product_name.toLowerCase().includes(search.toLowerCase()))
-        setFilteredproducts(filtered)
+    
+    
 
 
     }
@@ -43,9 +49,13 @@ const Getproduct = () => {
         }
     }
     // call our function
-    useEffect(() => {
-        getproduct()
-    }, [])
+    
+  
+     useEffect(() => {
+    getproduct();
+  }, [getproducts]);
+
+    // console 
     console.log(product);
     const imagepath = "http://bonifacekifaru.alwaysdata.net/static/images/"
 
