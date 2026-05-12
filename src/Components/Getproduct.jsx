@@ -17,11 +17,12 @@ const Getproduct = () => {
 
 
     // function to filter products 
-    useEffect(() => {
-        filterproducts()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-    
-    },        [search]                );
+   useEffect(() => {
+  filterproducts();
+}, [filterproducts]);
+  
+
+
     const filterproducts = () => {
         const filtered = product.filter(singleproduct => singleproduct.product_name.toLowerCase().includes(search.toLowerCase()))
         setFilteredproducts(filtered)
