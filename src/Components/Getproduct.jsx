@@ -19,7 +19,9 @@ const Getproduct = () => {
     // function to filter products 
     useEffect(() => {
         filterproducts()
-    },  [search])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+    
+    },        [search]                );
     const filterproducts = () => {
         const filtered = product.filter(singleproduct => singleproduct.product_name.toLowerCase().includes(search.toLowerCase()))
         setFilteredproducts(filtered)
@@ -44,8 +46,9 @@ const Getproduct = () => {
     }
     // call our function
     useEffect(() => {
-        getproduct()
-    }, [])
+  getproduct();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
     console.log(product);
     const imagepath = "http://bonifacekifaru.alwaysdata.net/static/images/"
 
