@@ -1,7 +1,8 @@
 import axios from 'axios'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect ,useCallback} from 'react'
 import { useNavigate } from 'react-router-dom'
 import Carousel from './Carousel';
+
 const Getproduct = () => {
     let navigate = useNavigate();
     // declare our states here 
@@ -17,15 +18,21 @@ const Getproduct = () => {
 
 
     // function to filter products 
-   useEffect(() => {
-  filterproducts();
-}, [filterproducts]);
+
+
+
+
+
+  const filterproducts = useCallback(() => {
+    // your filtering logic here
+  }, []);
+
+  useEffect(() => {
+    filterproducts();
+  }, [filterproducts]);
   
 
-
-    const filterproducts = () => {
-        const filtered = product.filter(singleproduct => singleproduct.product_name.toLowerCase().includes(search.toLowerCase()))
-        setFilteredproducts(filtered)
+  
         
 
     }
@@ -73,6 +80,14 @@ const Getproduct = () => {
 
 
     return (
+
+    <div>
+      {/* component JSX */}
+    
+  
+
+
+
         <div className="container-fluid">
             <div className="row">
                 {/* carousel goes here  */}
@@ -134,7 +149,10 @@ const Getproduct = () => {
                 </div>
             </div>
         </div>
-    )
-}
+        </div>
+    
+
+                );
+            };
 
 export default Getproduct
